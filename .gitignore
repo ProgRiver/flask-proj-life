@@ -4,4 +4,4 @@ Lib
 Scripts
 *.cfg
 Lib\site-packages
-venv2\__pycache__
+__pycache__
