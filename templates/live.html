@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{{ game }}
+
+{% block app_content %}
+    <a class="btn btn-warning home" href="{{ url_for('index') }}">На главную</a>
+    <a class="btn btn-info refresh" href="{{ url_for('live') }}">Создать новую жизнь</a>
+<table class="world">
+    {% set a = game.world %}
+    {% for i in range(a|length) %}
+        <tr>
+            {% for j in range(a|length) %}
+                {% if a[i][j] == 1 %}
+                    <td class="cell living-cell"></td>
+                {% else %}
+                    <td class="cell"></td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
