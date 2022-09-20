@@ -6,11 +6,14 @@
     <a class="btn btn-info refresh" href="{{ url_for('live') }}">Создать новую жизнь</a>
 <table class="world">
     {% set a = game.world %}
+    {% set old = game.old_world %}
     {% for i in range(a|length) %}
         <tr>
             {% for j in range(a|length) %}
-                {% if a[i][j] == 1 %}
+                {% if a[i][j] %}
                     <td class="cell living-cell"></td>
+                {% elif a[i][j] == 0 and old[i][j] == 1 %}
+                    <td class="cell dead-cell"></td>
                 {% else %}
                     <td class="cell"></td>
                 {% endif %}
