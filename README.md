@@ -19,4 +19,4 @@ ___
 :blush: :hand:
 ___
 
-[screenshot](https://github.com/ProgRiver/flask-proj-life/blob/main/assets/file_img.png)
+![screenshot](https://github.com/ProgRiver/flask-proj-life/blob/main/assets/file_img.png)
